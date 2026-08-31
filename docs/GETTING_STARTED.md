@@ -1,10 +1,5 @@
 # Getting Started
 
-## Step 0: Check your machine
-- 16GB RAM recommended, ~15GB free disk space
-- Windows: install WSL2 first (`wsl --install` in admin PowerShell, then restart, then open the Ubuntu app)
-- Mac/Linux: use your normal Terminal
-
 ## Step 1: Install Ollama
 
 curl -fsSL https://ollama.com/install.sh | sh
