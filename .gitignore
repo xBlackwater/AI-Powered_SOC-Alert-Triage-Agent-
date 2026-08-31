@@ -1,0 +1,13 @@
+# environment / secrets
+.env
+*.env
+venv/
+__pycache__/
+
+# datasets (too large for git, or sensitive)
+data/*.csv
+data/*.json
+
+# OS/editor junk
+.DS_Store
+*.swp
