@@ -4,7 +4,7 @@
 venv/
 __pycache__/
 
-# datasets (too large for git, or sensitive)
+# datasets
 data/*.csv
 data/*.json
 
