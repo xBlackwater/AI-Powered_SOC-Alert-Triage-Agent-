@@ -1,5 +1,4 @@
-mkdir -p docs
-cat > docs/PLAN.md << 'EOF'
+
 # Capstone Project Plan: AI-Powered SOC Alert Triage Agent
 
 ## 1. Project Summary
