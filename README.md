@@ -55,7 +55,7 @@ Full step-by-step walkthrough: `docs/GETTING_STARTED.md`
 
 ## Documentation
 
-- [`docs/PROPOSAL.docx`](docs/PROPOSAL.docx) — submitted project proposal
+- [`docs/PROPOSAL.docx`](docs/capstone_project_proposal.md) — submitted project proposal
 - [`docs/PLAN.md`](docs/PLAN.md) — architecture, timeline, evaluation plan
 
 ## Author
