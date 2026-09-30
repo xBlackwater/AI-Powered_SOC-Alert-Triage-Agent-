@@ -1,0 +1,211 @@
+[
+  {
+    "alert_id": "ALERT-0001",
+    "timestamp": "2026-09-30T02:47:55.051217",
+    "alert_type": "Brute Force Attack",
+    "severity_reported": "high",
+    "src_ip": "8.8.8.8",
+    "dest_ip": "8.8.8.8",
+    "internal_host": "WORKSTATION-12",
+    "raw_log": "Brute Force Attack detected from WORKSTATION-12"
+  },
+  {
+    "alert_id": "ALERT-0002",
+    "timestamp": "2026-09-30T14:40:55.051309",
+    "alert_type": "Suspicious Outbound Connection",
+    "severity_reported": "low",
+    "src_ip": "10.0.0.22",
+    "dest_ip": "8.8.8.8",
+    "internal_host": "SERVER-WEB02",
+    "raw_log": "Suspicious Outbound Connection detected from WORKSTATION-12",
+    "file_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "alert_id": "ALERT-0003",
+    "timestamp": "2026-09-30T05:05:55.051320",
+    "alert_type": "Brute Force Attack",
+    "severity_reported": "low",
+    "src_ip": "8.8.8.8",
+    "dest_ip": "45.155.205.233",
+    "internal_host": "SERVER-WEB02",
+    "raw_log": "Brute Force Attack detected from LAPTOP-USER23"
+  },
+  {
+    "alert_id": "ALERT-0004",
+    "timestamp": "2026-09-30T03:09:55.051324",
+    "alert_type": "Failed Login Attempts",
+    "severity_reported": "high",
+    "src_ip": "8.8.8.8",
+    "dest_ip": "10.0.0.22",
+    "internal_host": "WORKSTATION-07",
+    "raw_log": "Failed Login Attempts detected from LAPTOP-USER23"
+  },
+  {
+    "alert_id": "ALERT-0005",
+    "timestamp": "2026-09-30T17:18:55.051328",
+    "alert_type": "Failed Login Attempts",
+    "severity_reported": "medium",
+    "src_ip": "10.0.0.22",
+    "dest_ip": "1.1.1.1",
+    "internal_host": "LAPTOP-USER23",
+    "raw_log": "Failed Login Attempts detected from SERVER-WEB02"
+  },
+  {
+    "alert_id": "ALERT-0006",
+    "timestamp": "2026-09-30T00:14:55.051336",
+    "alert_type": "Privilege Escalation Attempt",
+    "severity_reported": "low",
+    "src_ip": "45.155.205.233",
+    "dest_ip": "203.0.113.77",
+    "internal_host": "WORKSTATION-07",
+    "raw_log": "Privilege Escalation Attempt detected from SERVER-WEB02",
+    "file_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "alert_id": "ALERT-0007",
+    "timestamp": "2026-09-30T11:07:55.051343",
+    "alert_type": "Privilege Escalation Attempt",
+    "severity_reported": "high",
+    "src_ip": "203.0.113.77",
+    "dest_ip": "1.1.1.1",
+    "internal_host": "LAPTOP-USER23",
+    "raw_log": "Privilege Escalation Attempt detected from WORKSTATION-12"
+  },
+  {
+    "alert_id": "ALERT-0008",
+    "timestamp": "2026-09-30T08:40:55.051346",
+    "alert_type": "Suspicious Outbound Connection",
+    "severity_reported": "high",
+    "src_ip": "203.0.113.77",
+    "dest_ip": "192.168.1.15",
+    "internal_host": "SERVER-WEB02",
+    "raw_log": "Suspicious Outbound Connection detected from WORKSTATION-07"
+  },
+  {
+    "alert_id": "ALERT-0009",
+    "timestamp": "2026-09-29T23:09:55.051349",
+    "alert_type": "Unusual Data Exfiltration Volume",
+    "severity_reported": "medium",
+    "src_ip": "185.220.101.45",
+    "dest_ip": "1.1.1.1",
+    "internal_host": "WORKSTATION-12",
+    "raw_log": "Unusual Data Exfiltration Volume detected from SERVER-DB01"
+  },
+  {
+    "alert_id": "ALERT-0010",
+    "timestamp": "2026-09-30T13:26:55.051352",
+    "alert_type": "Brute Force Attack",
+    "severity_reported": "high",
+    "src_ip": "192.168.1.15",
+    "dest_ip": "8.8.8.8",
+    "internal_host": "SERVER-DB01",
+    "raw_log": "Brute Force Attack detected from LAPTOP-USER23",
+    "file_hash": "44d88612fea8a8f36de82e1278abb02f"
+  },
+  {
+    "alert_id": "ALERT-0011",
+    "timestamp": "2026-09-30T10:15:55.051355",
+    "alert_type": "Malware Signature Match",
+    "severity_reported": "medium",
+    "src_ip": "45.155.205.233",
+    "dest_ip": "10.0.0.22",
+    "internal_host": "WORKSTATION-07",
+    "raw_log": "Malware Signature Match detected from WORKSTATION-12",
+    "file_hash": "44d88612fea8a8f36de82e1278abb02f"
+  },
+  {
+    "alert_id": "ALERT-0012",
+    "timestamp": "2026-09-29T20:06:55.051358",
+    "alert_type": "Port Scan Detected",
+    "severity_reported": "medium",
+    "src_ip": "203.0.113.77",
+    "dest_ip": "185.220.101.45",
+    "internal_host": "SERVER-WEB02",
+    "raw_log": "Port Scan Detected detected from WORKSTATION-07",
+    "file_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "alert_id": "ALERT-0013",
+    "timestamp": "2026-09-30T07:32:55.051361",
+    "alert_type": "Brute Force Attack",
+    "severity_reported": "medium",
+    "src_ip": "192.168.1.15",
+    "dest_ip": "1.1.1.1",
+    "internal_host": "WORKSTATION-12",
+    "raw_log": "Brute Force Attack detected from SERVER-WEB02"
+  },
+  {
+    "alert_id": "ALERT-0014",
+    "timestamp": "2026-09-30T14:29:55.051364",
+    "alert_type": "Failed Login Attempts",
+    "severity_reported": "medium",
+    "src_ip": "45.155.205.233",
+    "dest_ip": "10.0.0.22",
+    "internal_host": "LAPTOP-USER23",
+    "raw_log": "Failed Login Attempts detected from WORKSTATION-12",
+    "file_hash": "44d88612fea8a8f36de82e1278abb02f"
+  },
+  {
+    "alert_id": "ALERT-0015",
+    "timestamp": "2026-09-30T14:39:55.051367",
+    "alert_type": "Unusual Data Exfiltration Volume",
+    "severity_reported": "high",
+    "src_ip": "192.168.1.15",
+    "dest_ip": "185.220.101.45",
+    "internal_host": "LAPTOP-USER23",
+    "raw_log": "Unusual Data Exfiltration Volume detected from WORKSTATION-07",
+    "file_hash": "44d88612fea8a8f36de82e1278abb02f"
+  },
+  {
+    "alert_id": "ALERT-0016",
+    "timestamp": "2026-09-30T01:11:55.051370",
+    "alert_type": "Failed Login Attempts",
+    "severity_reported": "medium",
+    "src_ip": "203.0.113.77",
+    "dest_ip": "185.220.101.45",
+    "internal_host": "LAPTOP-USER23",
+    "raw_log": "Failed Login Attempts detected from WORKSTATION-07",
+    "file_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "alert_id": "ALERT-0017",
+    "timestamp": "2026-09-30T14:02:55.051372",
+    "alert_type": "Failed Login Attempts",
+    "severity_reported": "low",
+    "src_ip": "45.155.205.233",
+    "dest_ip": "192.168.1.15",
+    "internal_host": "WORKSTATION-07",
+    "raw_log": "Failed Login Attempts detected from SERVER-WEB02"
+  },
+  {
+    "alert_id": "ALERT-0018",
+    "timestamp": "2026-09-30T07:29:55.051375",
+    "alert_type": "Failed Login Attempts",
+    "severity_reported": "high",
+    "src_ip": "185.220.101.45",
+    "dest_ip": "1.1.1.1",
+    "internal_host": "LAPTOP-USER23",
+    "raw_log": "Failed Login Attempts detected from SERVER-WEB02"
+  },
+  {
+    "alert_id": "ALERT-0019",
+    "timestamp": "2026-09-30T15:49:55.051378",
+    "alert_type": "Failed Login Attempts",
+    "severity_reported": "low",
+    "src_ip": "10.0.0.22",
+    "dest_ip": "192.168.1.15",
+    "internal_host": "WORKSTATION-12",
+    "raw_log": "Failed Login Attempts detected from SERVER-DB01",
+    "file_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "alert_id": "ALERT-0020",
+    "timestamp": "2026-09-30T07:52:55.051381",
+    "alert_type": "Brute Force Attack",
+    "severity_reported": "medium",
+    "src_ip": "1.1.1.1",
+    "dest_ip": "45.155.205.233",
+    "internal_host": "WORKSTATION-07",
+    "raw_log": "Brute Force Attack detected from SERVER-DB01"
+  }
+]
