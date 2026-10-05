@@ -55,8 +55,8 @@ def is_external(ip):
         a = ipaddress.ip_address(ip)
     except ValueError:
         return False
-    return not (a.is_private or a.is_loopback or a.is_link_local
-                or a.is_reserved or a.is_multicast)
+    nets = ("10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "127.0.0.0/8", "169.254.0.0/16")
+    return not any(a in ipaddress.ip_network(n) for n in nets)
 
 
 def lookup_ip(ip):
@@ -200,10 +200,12 @@ def llm_justification(res):
     }
     system = (
         "You are a SOC analyst assistant. Write 2-3 sentences justifying the "
-        "assigned severity for the alert. Use ONLY the facts provided; do not "
-        "invent IPs, scores, or technique names. State the assigned severity "
-        "exactly as given. End with one recommended next step for a human "
-        "analyst. Never recommend automated containment."
+        "assigned severity for the alert. Use ONLY the facts provided. Do not "
+        "mention threat actors, nation-states, or what a country is known for. "
+        "A file hash listed on an alert was merely observed on that record; "
+        "do not claim it was used in or caused the alert activity. State the "
+        "assigned severity exactly as given. End with one recommended next "
+        "step for a human analyst. Never recommend automated containment."
     )
     try:
         r = requests.post(
