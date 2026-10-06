@@ -38,7 +38,7 @@ CONTAIN_RE = re.compile(
     r"\b(block|isolate|quarantine|disable|shut ?down|terminate|blacklist|wipe|reimage)\b", re.I)
 NUM_RE = re.compile(r"\d+")
 LIST_MARK_RE = re.compile(r"(?m)^\s*\d+[.)]\s+")
-ADJ_SEV_RE = re.compile(r"\b(low|medium|high|critical)[ -]severity\b", re.I)
+ADJ_SEV_RE = re.compile(r"\b(?:the|this|its|that)\s+(low|medium|high|critical)\s+severity\b", re.I)
 HASH_RE = re.compile(r"\bhash(?:es)?\b|\bsha-?256\b|\bmd5\b", re.I)
 
 
