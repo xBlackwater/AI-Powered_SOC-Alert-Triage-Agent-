@@ -26,13 +26,7 @@ CACHE_PATH = SCRIPT_DIR / ".enrichment_cache.json"
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 MODEL = os.environ.get("TRIAGE_MODEL", "llama3.1:8b")
 
-LEVELS = ["Low", "Medium", "High", "Critical"]
-HIGH_RISK_TYPES = {
-    "Privilege Escalation Attempt",
-    "Known C2 Beacon Pattern",
-    "Unusual Data Exfiltration Volume",
-    "Malware Signature Match",
-}
+# LEVELS and HIGH_RISK_TYPES now come from scoring.py
 
 VT_MIN_INTERVAL = 16  # seconds; VirusTotal free tier allows ~4 requests/minute
 _last_vt_call = 0.0
@@ -201,6 +195,7 @@ def llm_justification(res):
         "hash_enrichment": res["hash_results"],
         "internal_ips_not_enriched": res["skipped_internal"],
     }
+    facts = {k: v for k, v in facts.items() if v not in ({}, [], None)}
     system = (
         "You are a SOC analyst assistant. Write 2-3 sentences justifying the "
         "assigned severity for the alert. Use ONLY the facts provided. Do not "
@@ -208,7 +203,10 @@ def llm_justification(res):
         "A file hash listed on an alert was merely observed on that record; "
         "do not claim it was used in or caused the alert activity. State the "
         "assigned severity exactly as given. End with one recommended next "
-        "step for a human analyst. Never recommend automated containment."
+        "step for a human analyst. Never recommend automated containment. "
+        "Only discuss evidence that appears in the facts. If a category such as "
+        "file hashes is absent, do not mention it and do not treat missing data "
+        "as a clean result. Do not call a number high or low unless the facts say so."
     )
     try:
         r = requests.post(
