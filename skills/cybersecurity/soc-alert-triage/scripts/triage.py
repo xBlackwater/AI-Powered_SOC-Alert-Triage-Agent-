@@ -17,6 +17,8 @@ from pathlib import Path
 
 import requests
 
+from scoring import LEVELS, HIGH_RISK_TYPES, score_alert
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 CACHE_PATH = SCRIPT_DIR / ".enrichment_cache.json"
 
@@ -129,7 +131,7 @@ def enrich(kind, value, cache):
 
 
 # ---------- scoring ----------
-def score_alert(alert, ip_results, hash_results):
+def _legacy_score_alert(alert, ip_results, hash_results):
     level = 0
     reasons = []
     for ip, r in ip_results.items():
