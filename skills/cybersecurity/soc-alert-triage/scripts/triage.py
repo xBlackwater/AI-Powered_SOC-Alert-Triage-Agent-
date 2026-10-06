@@ -18,6 +18,7 @@ from pathlib import Path
 import requests
 
 from scoring import LEVELS, HIGH_RISK_TYPES, score_alert
+from attack_map import map_alert
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 CACHE_PATH = SCRIPT_DIR / ".enrichment_cache.json"
@@ -242,13 +243,13 @@ def write_report(results, path, used_llm):
         "Severity counts: " + ", ".join(f"{k}: {counts[k]}" for k in reversed(LEVELS)),
         f"Justifications: {'LLM (' + MODEL + ')' if used_llm else 'rule-based only'}",
         "",
-        "| Rank | Alert | Type | Reported | Triaged |",
-        "|---|---|---|---|---|",
+        "| Rank | Alert | Type | Reported | Triaged | ATT&CK |",
+        "|---|---|---|---|---|---|",
     ]
     for i, r in enumerate(results, 1):
         a = r["alert"]
         lines.append(f"| {i} | {a['alert_id']} | {a['alert_type']} | "
-                     f"{a.get('severity_reported', '-')} | **{r['severity']}** |")
+                     f"{a.get('severity_reported', '-')} | **{r['severity']}** | {r['attack']['id']} |")
     lines.append("")
     for i, r in enumerate(results, 1):
         a = r["alert"]
@@ -257,6 +258,8 @@ def write_report(results, path, used_llm):
             f"- Type: {a['alert_type']} (reported: {a.get('severity_reported', '-')})",
             f"- Host: {a.get('internal_host', '-')}, {a.get('src_ip')} -> {a.get('dest_ip')}",
             f"- Findings: {'; '.join(r['reasons'])}",
+            f"- ATT&CK: {r['attack']['id']} {r['attack']['name']} "
+            f"({r['attack']['tactic']}), confidence: {r['attack']['confidence']}",
             "",
             r["justification"],
             "",
@@ -290,6 +293,7 @@ def main():
     for i, alert in enumerate(alerts, 1):
         print(f"[{i}/{len(alerts)}] {alert['alert_id']} - {alert['alert_type']}")
         res = process_alert(alert, cache)
+        res["attack"] = map_alert(alert)
         print(f"      -> {res['severity']}")
         text = None
         if not args.no_llm and not llm_failed:
