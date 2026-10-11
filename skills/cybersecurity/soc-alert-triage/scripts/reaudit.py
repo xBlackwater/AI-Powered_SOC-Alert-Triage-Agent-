@@ -12,6 +12,7 @@ if len(sys.argv) != 2:
     sys.exit(__doc__)
 src = Path(sys.argv[1])
 recs = [json.loads(l) for l in src.read_text().splitlines() if l.strip()]
+recs.sort(key=lambda r: r["alert_id"])  # a resumed run can append alerts out of order
 for r in recs:
     r["flags"], r["details"] = aj.audit(r["text"], r["severity"], r["facts"])
 out = src.with_name(src.stem + "_reaudit.md")
