@@ -22,3 +22,11 @@ Reply matched = Hermes's reply contained the real counts and the real top alert 
 | 10 | FAIL | no | 93 |
 
 Full output of each run: docs/hermes_reliability_logs/20261022_1419/
+## Notes on runs 1, 2, 9, and 10 (from the saved output)
+
+- Run 1: The pipeline ran, but Hermes's final reply contained no results. It returned text formatted like a Hermes "out-of-band user message" marker, followed by a paraphrase of the skill's own instructions.
+- Run 2: Took 1,128 seconds. The 300-second timeout did not stop it, because timeout only sends a stop request. The median run took about 2 minutes.
+- Run 9: The model printed the tool call as text ({"command": "bash ~/soc-triage.sh"}) instead of making it, so nothing ran. It then fabricated a complete report: wrong counts (Critical 2, High 5, Medium 10, Low 15), alerts that do not exist, and ATT&CK IDs including "T877.001", which is not a valid technique ID.
+- Run 10: The model printed the tool call as text and stopped. Nothing ran, and no report was claimed.
+
+Summary: the pipeline ran in 8 of 10 runs. The result was correct end to end (pipeline ran and the reply matched the report) in 7 of 10. One run returned a fabricated report, which only the report-file check exposed.
