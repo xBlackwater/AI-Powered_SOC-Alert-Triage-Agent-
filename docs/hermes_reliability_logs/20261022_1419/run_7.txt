@@ -1,0 +1,14 @@
+Severity counts: Critical: 18, High: 3, Medium: 10, Low: 29
+| Rank | Alert | Type | Reported | Triaged | ATT&CK |
+|---|---|---|---|---|---|
+| 1 | ALERT-0005 | Brute Force Attack | high | **Critical** | T1110 |
+| 2 | ALERT-0013 | Port Scan Detected | medium | **Critical** | T1046 |
+| 3 | ALERT-0023 | Port Scan Detected | high | **Critical** | T1046 |
+| 4 | ALERT-0026 | Suspicious Outbound Connection | medium | **Critical** | T1071 |
+| 5 | ALERT-0029 | Port Scan Detected | medium | **Critical** | T1046 |
+| 6 | ALERT-0034 | Port Scan Detected | high | **Critical** | T1046 |
+| 7 | ALERT-0043 | Brute Force Attack | medium | **Critical** | T1110 |
+| 8 | ALERT-0003 | Known C2 Beacon Pattern | high | **Critical** | T1071 |
+| 9 | ALERT-0024 | Malware Signature Match | high | **Critical** | T1204.002 |
+| 10 | ALERT-0028 | Known C2 Beacon Pattern | high | **Critical** | T1071 |
+| 11 | ALERT-0035 | Malware Signature Match | high | **Critical** | T1204.002 |

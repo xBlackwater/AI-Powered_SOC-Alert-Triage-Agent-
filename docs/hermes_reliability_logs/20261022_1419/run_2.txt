@@ -1,0 +1,9 @@
+Severity counts: Critical: 18, High: 3, Medium: 10, Low: 29
+
+Here are the top 5 rows of the triage report:
+
+1. Alert: ALERT-0005, Type: Brute Force Attack, Reported: high, Triaged: **Critical**, ATT&CK: T1110
+2. Alert: ALERT-0013, Type: Port Scan Detected, Reported: medium, Triaged: **Critical**, ATT&CK: T1046
+3. Alert: ALERT-0023, Type: Port Scan Detected, Reported: high, Triaged: **Critical**, ATT&CK: T1046
+4. Alert: ALERT-0026, Type: Suspicious Outbound Connection, Reported: medium, Triaged: **Critical**, ATT&CK: T1071
+5. Alert: ALERT-0029, Type: Port Scan Detected, Reported: medium, Triaged: **Critical**, ATT&CK: T1046
