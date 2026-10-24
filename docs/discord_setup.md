@@ -21,3 +21,8 @@ Status: working as of October 24, 2026. The Hermes gateway runs a Discord bot, "
 - With the triage instructions attached to the channel, the first test returned the correct counts and top alerts.
 - Reliability of the channel setup has been tested on one run only.
 
+## Fresh alert batches
+- `touch ~/.soc_triage_fresh` turns on fresh mode. Each run generates a new 60-alert batch with a new seed. Labels are stripped before triage, and labeled copies are kept in batches/ (gitignored).
+- `rm -f ~/.soc_triage_fresh` returns to the fixed 60-alert demo set. Turn fresh mode off before running the reliability script, which expects 18/3/10/29.
+- In fresh mode, verify a run by checking that the bot's counts match the report: grep -E "Alert batch|Severity counts" docs/hermes_triage_report.md
+- Tested October 24, 2026: new batches used only already-cached IPs and hashes, each ran in about 1-2 seconds, and the Discord reply matched the report.
