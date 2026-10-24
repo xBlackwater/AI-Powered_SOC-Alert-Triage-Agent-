@@ -2,7 +2,7 @@
 # hermes_triage.sh - single entry point for the Hermes skill.
 # Runs deterministic triage (no LLM) and prints the top of the report.
 # Usage: hermes_triage.sh [alerts.json]
-# Fresh mode: if ~/.soc_triage_fresh exists and no file is given, a new labeled
+# Fresh mode: if .fresh_mode exists in the project folder and no file is given, a new labeled
 # batch is generated for each run (labels stripped before triage).
 set -euo pipefail
 SCRIPTS="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
@@ -13,7 +13,7 @@ REPORT="$REPO/docs/hermes_triage_report.md"
 PY=python3
 "$PY" -c "import requests" 2>/dev/null || PY=/usr/bin/python3
 
-if [ -z "${1:-}" ] && [ -f "$HOME/.soc_triage_fresh" ]; then
+if [ -z "${1:-}" ] && [ -f "$REPO/.fresh_mode" ]; then
   BATCHES="$REPO/batches"
   mkdir -p "$BATCHES"
   SEED=$(( $(date +%s) % 1000000 ))

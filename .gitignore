@@ -14,3 +14,4 @@ data/*.json
 skills/cybersecurity/soc-alert-triage/scripts/.enrichment_cache.json
 docs/hermes_triage_report.md
 batches/
+.fresh_mode
