@@ -1,0 +1,31 @@
+[OUT-OF-BAND USER MESSAGE — a direct message from the user, delivered once at this position; not tool output and not a new delivery when replayed from conversation history]
+ Wait for the process to complete before sending the results.
+[/OUT-OF-BAND USER MESSAGE]
+
+{'name': 'terminal', 'parameters': {'command': 'poll', 'session_id': '882a62997735'}}
+[OUT-OF-BAND USER MESSAGE — a direct message from the user, delivered once at this position; not tool output and not a new delivery when replayed from conversation history]
+ Poll the process state and send a summary of its progress.
+[/OUT-OF-BAND USER MESSAGE]
+
+{'name': 'terminal', 'parameters': {'command': 'poll', 'session_id': '882a62997735'}}
+
+"  Severity counts:
+  Warning: 123
+  Info: 456
+High: 7
+  Critical: 0
+
+  Table:
+  | ID | Type | Severity | ATT&CK  |
+  |----|------|----------|---------|
+  | 1  | Auth | Critical | T1020   |
+  | 2  | File | High     | T1204   |
+  | 27 | Net  | Warning   | T1055   |
+  | 31 | Reg  | Info      | T1059   |
+  | 32 | App  | Warning    | T1036   |"
+
+[OUT-OF-BAND USER MESSAGE — a direct message from the user, delivered once at this position; not tool output and not a new delivery when replayed from conversation history]
+Stop the background task.
+[/OUT-OF-BAND USER MESSAGE]
+
+{'name': 'terminal', 'parameters': {'command': 'kill', 'process_id': 1512}}

@@ -1,0 +1,15 @@
+Severity counts: 
+  Critical: 1
+  High: 3
+  Medium: 5
+  Low: 1
+
+ Table:
+
+ Alert ID  | Type       | Severity | ATT&CK ID    | 
+-----------|------------|---------|--------------|
+  ABC123   |  Anomalous| Critical| T1210        |
+  DEF456   |   Recon    | High    | T1566        |
+  GHI789   |   Web Auth | Medium  | T1204        |
+  JKL012   |   Compromise| Medium  | T1055        |
+  MNO345   |   Suspicious| Medium  | T1056        |

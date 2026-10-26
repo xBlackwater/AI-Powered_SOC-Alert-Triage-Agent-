@@ -1,0 +1,13 @@
+Severity counts:
+  high: 12
+  medium: 8
+  low: 5
+
+Top 5 rows of the triage table:
+  ID | Type | Triage Severity | ATT&CK ID
+  ------------------------------------------------
+  1  | auth | high            | T1190
+  2  | sftp | high            | T1210
+  3  | ssh  | high            | T1211
+  4  | ftp  | medium          | T1091
+  5  | http | medium          | T1584

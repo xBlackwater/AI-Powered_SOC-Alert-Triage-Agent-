@@ -1,0 +1,1 @@
+{"name": "terminal", "parameters": {"background": True, "command": "bash ~/soc-triage.sh", "persist_on_release": True}}

@@ -1,0 +1,9 @@
+Severity counts: High=42, Medium=121, Low=35
+
+| Alert ID | Type | Severity | ATT&CK ID |    
+| --- | --- | --- | --- |    
+| 56789 | Network Intrusion | Medium | T1003  |    
+| 12345 | User Execution | High | T1212 |    
+| 67890 | File System Changes | Low | T1050 |    
+| 34567 | System Service Installation | High | T1055 |    
+| 22334 | System Login Activity | Medium | T1550 |
